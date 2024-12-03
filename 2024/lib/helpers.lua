@@ -9,4 +9,12 @@ function aoc.readFile(fileName)
     end
 end
 
+function aoc.splitString(s, sep)
+    local t = {}
+    for line in string.gmatch(s, "([^" .. sep .. "]+)") do
+        table.insert(t, line)
+    end
+    return t
+end
+
 return aoc
